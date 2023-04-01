@@ -1,0 +1,10 @@
+.header--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores {
+  margin:5px;
+}

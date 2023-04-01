@@ -4,10 +4,10 @@ import './styles/card-styles.css'
 export default function Cards(props) {
 
   return (
-    <div>
+    <div className='cards--container'>
       {props.allImages.map(image => {
         return (
-          <div key={image.id} onClick={() => props.handleClick(image.id)}>
+          <div className='cards--card' key={image.id} onClick={() => props.handleClick(image.id)}>
             <img
               className='card--images'
               src={require(`${image.src}`)}

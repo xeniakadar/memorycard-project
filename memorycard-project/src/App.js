@@ -9,12 +9,6 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [allImages, setAllImages] = useState([
     {
-      title: 'George is surprised',
-      src: './images/bush.jpeg',
-      isClicked: false,
-      id: uniqid()
-    },
-    {
       title: 'Dog wearing pearls',
     src: './images/dog-pearls.png',
     isClicked: false,
@@ -35,6 +29,36 @@ function App() {
     {
       title: 'Rat eating brie',
     src: './images/rat-eating-brie.png',
+    isClicked: false,
+    id: uniqid()
+  },
+    {
+      title: 'Distinguished Cat',
+    src: './images/cat-dress.png',
+    isClicked: false,
+    id: uniqid()
+  },
+    {
+      title: 'An elephant and a giraffe having a heated debate',
+    src: './images/elephant-giraffe.png',
+    isClicked: false,
+    id: uniqid()
+  },
+    {
+      title: 'A dolphin doing science',
+    src: './images/dolphin.png',
+    isClicked: false,
+    id: uniqid()
+  },
+    {
+      title: 'A tiger making tea',
+    src: './images/tiger.png',
+    isClicked: false,
+    id: uniqid()
+  },
+    {
+      title: 'A royal owl',
+    src: './images/owl.png',
     isClicked: false,
     id: uniqid()
   },
@@ -74,7 +98,6 @@ function App() {
         allImages[i].isClicked = true;
         setCurrentScore(currentScore + 1)
       } else if (allImages[i].id === idImage && allImages[i].isClicked === true) {
-        console.log("NOOOOO");
         checkBestScore();
         resetScore();
       }
@@ -85,8 +108,8 @@ function App() {
 
   return (
     <div>
-      {currentScore === 5 && <Confetti />}
-      <Header currentScore={currentScore} bestScore={bestScore} />
+      {currentScore === allImages.length && <Confetti />}
+      <Header currentScore={currentScore} bestScore={bestScore} allImages={allImages} />
       <Cards allImages={allImages} handleClick={handleClick} />
     </div>
   )
