@@ -11,11 +11,12 @@ body {
 }
 
 .cards--container {
-  background-color: rgb(245, 213, 173, 0.9);
+  /* background-color: rgb(245, 213, 173, 0.9); */
   border-radius: 10px;
-  padding: 0px;
+  padding: 15px;
   margin: 0px;
   display: grid;
+  gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -24,7 +25,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  background-color: #884400;
+  color: #f5c396;
 
 }
 
